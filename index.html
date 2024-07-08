@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbershop</title>
+    <link rel="icon" href="./icon/favicon.ico" sizes="any" />
+    <link rel="icon" href="./icon/android-chrome-192x192.png" />
+    <link rel="icon" href="./icon/android-chrome-512x512.png" />
+    <link rel="icon" href="./icon/favicon-16x16.png" />
+    <link rel="icon" href="./icon/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="./icon/apple-touch-icon.png" />
+    <link rel="icon" href="./svg/Adult-haircut-img.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+  </head>
+  <body class="page">
+    <div class="beige">
+      <header class="background_img">
+        <div class="overlay"></div>
+        <div class="grid">
+          <div class="logo">
+            <img src="./img/Logo.png" alt="logo" />
+          </div>
+          <div class="barber_title">
+            <h1 class="barber_title_block">
+              "BARBER: ГДЕ СТИЛЬ РОЖДАЕТСЯ<br />ПОД ОСТРИЕМ ЛЕЗВИЯ"
+            </h1>
+          </div>
+          <div class="barber_title_button">
+            <button
+              id="open-modal-btn"
+              type="button"
+              class="button_appointment button open-popup"
+            >
+              ЗАПИСАТЬСЯ НА ПРИЕМ
+            </button>
+
+            <a href="#services" class="button_services button"
+              >ПОСМОТРЕТЬ УСЛУГИ</a
+            >
+          </div>
+
+          <div class="modal" id="my-modal">
+            <div class="modal__box">
+              <button class="modal__close-btn" id="close-my-modal-btn">
+                <svg
+                  id="cross"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 58 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.78862 1.65579L1.67051 6.7739L23.849 28.9524L1.67051 51.1309L6.78862 56.249L28.9671 34.0705L51.1456 56.249L56.2637 51.1309L34.0852 28.9524L56.2637 6.77389L51.1456 1.65579L28.9671 23.8343L6.78862 1.65579Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+              <div class="form">
+                <form action="">
+                  <div class="input_block">
+                    <div>
+                      <label class="provide_details" for="formName"
+                        >Укажите ваши данные*</label
+                      >
+                      <input
+                        id="formName"
+                        class="name-time-input form_input _req"
+                        type="text"
+                        placeholder="Имя, Фамилия"
+                      />
+                    </div>
+                    <div>
+                      <div class="form_label provide_details">
+                        Укажите время для посещения*
+                      </div>
+
+                      <select name="time-come" class="select">
+                        <option value="1" selected="selected">
+                          c 10:00 до 11:00
+                        </option>
+                        <option value="2">c 12:00 до 13:00</option>
+                        <option value="3">c 15:00 до 16:00</option>
+                        <option value="4">c 18:00 до 19:00</option>
+                      </select>
+                    </div>
+                    <div class="form__input-flex">
+                      <div>
+                        <label class="provide_details" for="formPhone"
+                          >Введите телефон*</label
+                        >
+                        <input
+                          id="formPhone"
+                          class="input-data form_input"
+                          type="text"
+                          placeholder="телефон"
+                        />
+                      </div>
+                      <div>
+                        <label class="provide_details" for="formEmail"
+                          >Введите e-mail*</label
+                        >
+                        <input
+                          id="formEmail"
+                          class="input-data form_input _req _email"
+                          type="text"
+                          placeholder="e-mail"
+                        />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="provide_details" for="formMessage"
+                        >Пожалуйста, введите ваше сообщение с пожеланием
+                        здесь...</label
+                      >
+                      <textarea
+                        name="massage"
+                        id="formMessage"
+                        class="name-time-input form_input"
+                      ></textarea>
+                    </div>
+                    <div class="file__preview"></div>
+                    <div class="checkbox">
+                      <input
+                        id="formAgreement"
+                        type="checkbox"
+                        checked
+                        name="agreement"
+                        class="checkbox__input _req form_input"
+                      />
+                      <label for="formAgreement" class="checkbox__label"
+                        ><span
+                          >Я даю свое согласие на обработку персональных
+                          данных</span
+                        ></label
+                      >
+                    </div>
+                    <div class="button_form">
+                      <button class="button__form button" type="submit">
+                        Отправить
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact_menu">
+            <div class="contact_menu_block">
+              <div class="contact_block">
+                <img
+                  src="./icon/phone img.png"
+                  alt="phone"
+                  class="logo_contact_menu"
+                />
+                <p class="contact_menu_text">ТЕЛЕФОН</p>
+                <a href="tel:+74951481181" class="phone-number"
+                  >+7(495)-148-11-81</a
+                >
+                <a href="tel:+79261481181" class="phone-number"
+                  >+7(926)-148-11-81</a
+                >
+              </div>
+
+              <div class="contact_block">
+                <img
+                  src="./icon/hours img.png"
+                  alt="opening hours"
+                  class="logo_contact_menu"
+                />
+                <p class="contact_menu_text">ЧАСЫ РАБОТЫ</p>
+                <p class="workinghours">ПН-Сб: 9:00 - 20:00</p>
+                <p class="workinghours">BC: 10:00 - 19:00</p>
+              </div>
+
+              <div class="contact_block">
+                <img
+                  src="./icon/address img.png"
+                  alt="address"
+                  class="logo_contact_menu"
+                />
+                <p class="contact_menu_text">АДРЕС</p>
+                <p class="workinghours">УЛ. ЛЬВА ТОЛСТОГО, Д.16,</p>
+                <p class="workinghours">Г.Москва</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="first_block">
+        <div class="stylish_look">
+          <h2 class="stylish_title">СТИЛЬНЫЙ ОБРАЗ НА ПОРОГЕ ВАШЕГО ДОМА</h2>
+          <p class="stylish_paragraph">
+            Теперь посещение барбершопа стало еще удобнее! Наши профессиональные
+            барберы с удовольствием приедут к вам туда, где вам комфортно –
+            домой или в офис. Хотите идеальную стрижку? Закажите выезд барбера
+            прямо сейчас.
+          </p>
+          <div class="satisfaction_block">
+            <div class="customer_satisfaction">
+              <span class="num">99<span class="symbol">%</span></span>
+              <p class="satisfaction_text">УДОВЛЕТВОРЕННОСТЬ<br />КЛИЕНТОВ</p>
+            </div>
+            <div class="customer_satisfaction">
+              <span class="num">10<span class="symbol">+</span></span>
+              <p class="satisfaction_text">БОЛЬШОЙ<br />ОПЫТ</p>
+            </div>
+          </div>
+        </div>
+        <div class="picture_img">
+          <img
+            class="stylish_photo"
+            src="./img/agustin-fernandez-1Pmp9uxK8X8-unsplash.jpg"
+            alt="barber"
+          />
+        </div>
+      </main>
+      <main class="second-block" id="services">
+        <div class="services">
+          <div class="services_title_grid">
+            <h2 class="services_title">НАШИ УСЛУГИ</h2>
+            <p class="services_paragraph">
+              Хотите стильную стрижку, идеально подходящую именно вам, ухоженные
+              бороду и опытного барбера, который знает толк в мужских прическах?
+              Тогда приходите в барбершоп “BARBER”
+            </p>
+          </div>
+
+          <div class="services_column">
+            <div class="services_grid">
+              <img
+                class="services_img"
+                src="./img/Image icon.png"
+                alt="ножницы с расческой"
+              />
+              <div class="services_block">
+                <h3 class="service_name">СТРИЖКА</h3>
+                <p class="service_list">
+                  Работаем с классическими стилями, так и с самыми передовыми
+                  вариантами – берберские стрижки, кроп, андеркат
+                </p>
+                <p class="price">ОТ 1300 РУБ</p>
+              </div>
+              <img
+                class="services_img"
+                src="./img/Image icon2.png"
+                alt="триммер"
+              />
+              <div class="services_block">
+                <h3 class="service_name">СТРИЖКА БОРОДЫ</h3>
+                <p class="service_list">
+                  Включает в себя снятие объема/длины бороды и усов без создания
+                  формы и проекции. Выполняется при помощи машинки и насадки
+                </p>
+                <p class="price">390 РУБ</p>
+              </div>
+
+              <img
+                class="services_img"
+                src="./img/Image icon3.png"
+                alt="парфюм"
+              />
+              <div class="services_block">
+                <h3 class="service_name">УХОД ЗА КОЖЕЙ</h3>
+                <p class="service_list">
+                  Мы используем передовую косметику для вашей кожи и волос,
+                  чтобы достичь идеального состояния и подчеркнуть вашу
+                  естественную красоту.
+                </p>
+                <p class="price">ОТ 1000 РУБ</p>
+              </div>
+            </div>
+            <div class="services_grid">
+              <img
+                class="services_img"
+                src="./img/Image icon4.png"
+                alt="расческа"
+              />
+              <div class="services_block">
+                <h3 class="service_name">ДЕТСКАЯ СТРИЖКА</h3>
+                <p class="service_list">
+                  Для детей от 4 до 10 лет. Наши заботливые барберы идеально
+                  подстригут вашего ребенка
+                </p>
+                <p class="price">ОТ 600 РУБ</p>
+              </div>
+
+              <img
+                class="services_img"
+                src="./img/Image icon5.png"
+                alt="бритва"
+              />
+              <div class="services_block">
+                <h3 class="service_name">БРИТЬЕ ГОЛОВЫ</h3>
+                <p class="service_list">
+                  Включает предварительное распаривание кожи, применение острого
+                  клинка, итальянского лосьона и взбитой пены для гладкого
+                  бритья.
+                </p>
+                <p class="price">ОТ 990 РУБ</p>
+              </div>
+
+              <img
+                class="services_img"
+                src="./img/Image icon6.png"
+                alt="расческа"
+              />
+              <div class="services_block">
+                <h3 class="service_name">МОДЕЛИРОВАНИЕ БОРОДЫ</h3>
+                <p class="service_list">
+                  Создание формы бороды с учетом особенностей лица и головы
+                  включает распаривание кожи, придание четкого контура с помощью
+                  опасной бритвы или шейвера.
+                </p>
+                <p class="price">ОТ 2000 РУБ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="barber_title_button">
+          <button
+            id="button2"
+            type="button"
+            class="button_appointment button open-popup"
+          >
+            ЗАПИСАТЬСЯ НА ПРИЕМ
+          </button>
+        </div>
+        
+        
+      </main>
+      <main class="third-block">
+        <div class="overlay"></div>
+        <div class="call_master">
+          <h2 class="call_master_title">
+            Расслабьтесь и насладитесь роскошью профессиональной стрижки, не
+            выходя из дома или офиса.
+          </h2>
+
+          <button id="button3" type="button" class="button_appointment button open-popup">
+            ВЫЗВАТЬ МАСТЕРА
+          </button>
+
+
+          <div class="modal" id="my-modal2">
+            <div class="modal__box">
+              <button class="modal__close-btn" id="close-my-modal-btn2">
+                <svg
+                  id="cross"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 58 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.78862 1.65579L1.67051 6.7739L23.849 28.9524L1.67051 51.1309L6.78862 56.249L28.9671 34.0705L51.1456 56.249L56.2637 51.1309L34.0852 28.9524L56.2637 6.77389L51.1456 1.65579L28.9671 23.8343L6.78862 1.65579Z"
+                    fill="black"
+                  />
+                </svg>
+              </button>
+              <div class="form">
+                <form action="">
+                  <div class="input_block">
+                    <div>
+                      <label class="provide_details" for="formName"
+                        >Укажите ваши данные*</label
+                      >
+                      <input
+                        id="formName"
+                        class="name-time-input form_input _req"
+                        type="text"
+                        placeholder="Имя, Фамилия"
+                      />
+                    </div>
+                    <div class="form__input-flex">
+                      <div>
+                        <label class="provide_details" for="formPhone"
+                          >Введите телефон*</label
+                        >
+                        <input
+                          id="formPhone"
+                          class="input-data form_input"
+                          type="text"
+                          placeholder="телефон"
+                        />
+                      </div>
+                      <div>
+                        <label class="provide_details" for="formEmail"
+                          >Введите e-mail*</label
+                        >
+                        <input
+                          id="formEmail"
+                          class="input-data form_input _req _email"
+                          type="text"
+                          placeholder="e-mail"
+                        />
+                      </div>
+                    </div>
+                    <div class="form__item">
+                      <label class="provide_details" for="formMessage"
+                        >Пожалуйста, введите ваше сообщение с пожеланием
+                        здесь...</label
+                      >
+                      <textarea
+                        name="massage"
+                        id="formMessage"
+                        class="name-time-input form_input"
+                      ></textarea>
+                    </div>
+                    <div class="file__preview"></div>
+                    <div class="checkbox">
+                      <input
+                        id="formAgreement"
+                        type="checkbox"
+                        checked
+                        name="agreement"
+                        class="checkbox__input _req form_input"
+                      />
+                      <label for="formAgreement" class="checkbox__label"
+                        ><span
+                          >Я даю свое согласие на обработку персональных
+                          данных</span
+                        ></label
+                      >
+                    </div>
+                    <div class="button_form">
+                      <button class="button__form button" type="submit">
+                        Отправить
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+          
+
+
+        </div>
+      </main>
+      <!--block describing why they choose us -->
+      <main class="fourth-block">
+        <div class="fourth-block_grid_title">
+          <div class="fourth-block_grid">
+            <div class="fourth-block_title">
+              <h2 class="block_title">ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
+              <p class="block_paragraph">
+                В нашем барбершопе царит атмосфера мужской дружбы и комфорта.
+                Здесь вы можете расслабиться, отдохнуть от забот и насладиться
+                общением с настоящими мужчинами. Наши барберы – не просто
+                мастера, а настоящие друзья, которые всегда готовы помочь вам
+                найти свой идеальный образ.
+              </p>
+            </div>
+            <div class="fourth-block_column">
+              <div class="fourth_column_grid">
+                <img
+                  class="fourth_img"
+                  src="./img/licensed.png"
+                  alt="лицензия"
+                />
+                <a class="lmt" href="#">LICENSED</a>
+                <p class="fourth_paragraph">
+                  Наши барберы - настоящие профессионалы, обладающие лицензиями
+                  и дипломами, подтверждающими их высокую квалификацию. Мы
+                  заботимся о вашем комфорте и безопасности, поэтому работаем
+                  только с сертифицированными специалистами.
+                </p>
+              </div>
+
+              <div class="fourth_column_grid">
+                <img class="fourth_img" src="./img/masters.png" alt="мастера" />
+                <a class="lmt" href="#">MASTERS</a>
+                <p class="fourth_paragraph">
+                  В нашем барбершопе работают только опытные мастера, которые
+                  влюблены в свое дело и постоянно совершенствуют свои навыки.
+                  Мы гарантируем высочайшее качество услуг и индивидуальный
+                  подход к каждому клиенту.
+                </p>
+              </div>
+
+              <div class="fourth_column_grid">
+                <img class="fourth_img" src="./img/trusted.png" alt="доверие" />
+                <a class="lmt" href="#">TRUSTED</a>
+                <p class="fourth_paragraph">
+                  Нам доверяют! Тысячи клиентов уже оценили профессионализм и
+                  качество услуг в нашем барбершопе. Мы гордимся своей
+                  репутацией и стараемся предоставлять только лучшие услуги для
+                  наших постоянных и новых клиентов.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="best_service">
+            <div class="service_block">
+              <div class="service">
+                <a
+                  href="https://yandex.ru/maps/org/yandeks_muzey/243505161717/?ll=37.642679%2C55.735296&z=14.92"
+                  target="_blank"
+                >
+                  <img
+                    class="service_img"
+                    src="./img/icon-yandex.png"
+                    alt="яндекс"
+                  />
+                </a>
+                <p class="service_paragraph">Яндекс</p>
+                <span class="service_grade">4.9</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="152"
+                  height="27"
+                  viewBox="0 0 161 28"
+                >
+                  <use href="./svg/star.svg#star"></use>
+                </svg>
+                <a
+                  href="https://yandex.ru/maps/org/yandeks_muzey/243505161717/reviews/?ll=37.642679%2C55.735296&mode=search&sctx=ZAAAAAgDEAAaKAoSCbppM05D0kJAEZdw6C0e3ktAEhIJe4LEdvcAnT8RQQ3fwrrxnj8iBgABAgMEBSgKOABA3q0HSABqAnJ1nQHNzEw9oAEAqAEAvQEaaziHwgEGsvekpbIGggIX0Y%2FQvdC00LXQutGBINC80YPQt9C10LmKAgCSAgCaAgxkZXNrdG9wLW1hcHOwAgE%3D&sll=37.642679%2C55.735296&sspn=0.033840%2C0.015971&tab=reviews&text=zyltrc%20veptq&z=14.92"
+                  target="_blank"
+                >
+                  <button class="reviews">296 отзывов</button>
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <di class="model">
+                <img src="./img/MODEL.png" alt="клиент" />
+              </di>
+              <div class="review_block">
+                <svg
+                  class="svg_starr"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="152"
+                  height="27"
+                  viewBox="0 0 161 28"
+                >
+                  <use href="./svg/star.svg#star"></use>
+                </svg>
+                <h3 class="review_block_title">ЛУЧШИЙ СЕРВИС</h3>
+                <p class="review_block_paragraph">
+                  Атмосфера здесь пропитана аурой успеха, обслуживание на таком
+                  высоком уровне, что могу полностью отключиться и насладиться
+                  процессом. Каждый визит - это не просто стрижка, а целый
+                  ритуал, который дарит обновленный внешний вид и уверенность в
+                  себе.
+                </p>
+                <p class="yan_abramov">ЯН АБРАМОВ</p>
+              </div>
+            </div>
+            <div class="service_block">
+              <div class="service">
+                <a
+                  href="https://www.tripadvisor.ru/Attraction_Review-g295392-d24378414-Reviews-Zeus_Barbershop_Store_Premium_Men_s_Club-Varna_Varna_Province.html"
+                  target="_blank"
+                >
+                  <img
+                    class="service_img"
+                    src="./img/icon-tripadvisor.png"
+                    alt="tripadvisor"
+                  />
+                </a>
+                <p class="service_paragraph">TRIPADVISOR</p>
+                <span class="service_grade">5.0</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="152"
+                  height="27"
+                  viewBox="0 0 161 28"
+                >
+                  <use href="./svg/star.svg#star"></use>
+                </svg>
+                <a
+                  href="https://www.tripadvisor.ru/Attraction_Review-g295392-d24378414-Reviews-Zeus_Barbershop_Store_Premium_Men_s_Club"
+                  target="_blank"
+                >
+                  <button class="reviews">196 отзывов</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="waiting_visit">
+          <div class="overlay"></div>
+          <div class="waiting_grid">
+            <div class="waiting_title_grid">
+              <div class="block_distance">
+                <h2 class="waiting_title">ЖДЕМ ВАС<br />В ГОСТИ</h2>
+                <p class="waiting_paragraph">
+                  Вас ждет уютная расслабляющая обстановка, располагающая к
+                  душевному общению. Прекрасные интерьеры в теплых тонах,
+                  ненавязчивая музыка и высокий уровень обслуживания.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="flex">
+                <img src="./img/call me.png" alt="позвонить нам" />
+                <div>
+                  <p class="connect_with_us">ПОЗВОНИТЕ НАМ</p>
+                  <a href="tel:+74951481181" class="our_data"
+                    >+7(495)-148-11-81</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="send_letter">
+              <div class="flex">
+                <img src="./img/send a letter.png" alt="написать нам" />
+                <div>
+                  <p class="connect_with_us">ОТПРАВИТЬ НАМ ПИСЬМО</p>
+                  <a href="mailto:barbershop@yandex.ru" class="our_data"
+                    >barbershop@yandex.ru</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="map" class="map"></div>
+      </main>
+    </div>
+    <footer>
+      <div class="social_media">
+        <a
+          href="https://www.instagram.com/archibarbershop?igsh=MXFvdmsxcnBva2Q3OA=="
+          target="_blank"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <use href="./svg/Instagram.svg#instagram"></use>
+          </svg>
+        </a>
+
+        <a href="https://vk.com/salonborodach?from=search" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <use href="./svg/vk.svg#vk"></use>
+          </svg>
+        </a>
+        <a
+          href="https://youtu.be/8pWtdanVz3I?si=MXdenP0QicnVaMc7"
+          target="_blank"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <use href="./svg/youtube.svg#youtube"></use>
+          </svg>
+        </a>
+
+        <a href="https://t.me/barberrf" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <use href="./svg/telegram.svg#telegram"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=6bd3dca2-7ecd-426f-a16c-3c9946e4b26b&lang=ru_RU"></script>
+    <script src="./ functional.js/function.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Barlow-Black';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Barlow-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Barlow Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Barlow-Bold.otf') format('opentype');
+}
+
+
+@font-face {
+    font-family: "Barlow ExtraBold";
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/Barlow-Extra\ Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/WorkSans-Regular.ttf') format('truetype');
+}

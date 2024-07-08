@@ -1,0 +1,878 @@
+/* * {
+  box-sizing: border-box;
+}
+
+* {
+  outline: 2px solid red;
+} */
+
+.page {
+  margin: 0 auto;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  background-color: black;
+}
+
+.beige {
+  background-color: #fdf9f5;
+}
+
+.background_img {
+  position: relative;
+  /* max-inline-size: 1440px;  */
+  margin-inline: auto;
+  min-height: 781px;
+  z-index: 1;
+  background-image: url(../img/window.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.grid {
+  display: grid;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 64px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 30%);
+}
+
+.barber_title_block {
+  font-family: "Barlow Black";
+  font-size: clamp(1.875rem, 1.3248rem + 2.3474vw, 3.4375rem);
+  color: white;
+  text-align: center;
+}
+
+img {
+  width: clamp(50px, 2vw + 50px, 150px);
+  height: auto;
+  display: block;
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.barber_title {
+  margin-block-start: 250px;
+}
+
+.barber_title_button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 49px;
+  justify-content: center;
+}
+
+.button {
+  cursor: pointer;
+  font-family: Barlow-Black, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+}
+
+.button_appointment {
+  padding: 20px 17px;
+  background-color: #dec7a6;
+  color: black;
+  border: none;
+}
+
+.button_services {
+  padding: 20px 27px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.contact_menu {
+  position: relative;
+  top: 130px;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  margin: 0 auto;
+  max-inline-size: 1240px;
+}
+
+.contact_menu_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: white;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact_block {
+  display: grid;
+  gap: 5px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.logo_contact_menu {
+  width: 48px;
+  height: 48px;
+}
+
+.contact_menu_text {
+  font-family: 'Barlow Bold', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+}
+
+.phone-number {
+  font-family: "Barlow Bold", Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  color: black;
+  text-decoration: none;
+}
+
+.workinghours {
+  font-family: Barlow-Bold, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  text-align: center;
+}
+
+.first_block {
+  display: grid;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  min-inline-size: 375px;
+  max-inline-size: 1240px;
+  grid-template-columns: 1fr 1fr;
+  margin-block-start: 295px;
+  margin-block-end: 143px;
+}
+
+.stylish_title {
+  font-family: Barlow ExtraBold, sans-serif;
+  max-width: 419px;
+  font-size: clamp(1.875rem, 1.604rem + 1.1561vw, 2.5rem);
+  text-align: left;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.stylish_paragraph {
+  text-align: left;
+  max-width: 493px;
+  font-family: Work Sans, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-inline-end: 20px;
+  text-transform: uppercase;
+}
+
+.stylish_look {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 29px;
+}
+
+.stylish_look .stylish_paragraph:second-child {
+  margin-bottom: 23px;
+}
+
+.satisfaction_block {
+  display: flex;
+  gap: 68px;
+}
+
+.customer_satisfaction {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.num {
+  font-family: Barlow ExtraBold, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.symbol {
+  color: #dec7a6;
+}
+
+.satisfaction_text {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.stylish_photo {
+  width: 603px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.services {
+  display: grid;
+  align-items: center;
+  max-inline-size: 1026px;
+  background-color: white;
+  margin: 0 auto;
+  gap: 75px;
+  margin-block-end: 43px;
+}
+
+.services_title {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.services_title_grid {
+  display: grid;
+  gap: 34px;
+  justify-items: center;
+}
+
+.services_paragraph {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  max-width: 593px;
+  letter-spacing: 0.6px;
+}
+
+.services_column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 77px;
+}
+.services_grid {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.services_img {
+  width: 64px;
+  margin-block-start: 5px;
+  object-fit: cover;
+}
+
+.services_block {
+  display: grid;
+}
+
+.service_name {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-size: 24px;
+  margin-block-end: 10px;
+}
+.service_list {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-block-end: 17px;
+}
+
+.second-block {
+  margin-block-end: 152px;
+  padding: 0 20px 0 20px;
+}
+.price {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.third-block {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 20px 0 20px;
+  z-index: 0;
+  background-image: url(../img/barber\ at\ work.jpg);
+  min-height: 569px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-block-end: 137px;
+}
+
+.call_master_title {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-size: clamp(1.875rem, 1.604rem + 1.1561vw, 2.5rem);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.call_master {
+  display: grid;
+  max-width: 814px;
+  gap: 48px;
+  justify-items: center;
+}
+
+.fourth-block {
+  background-color: white;
+}
+.fourth-block_grid_title {
+  margin: 0 auto;
+  max-inline-size: 1280px;
+}
+.fourth-block_grid {
+  display: grid;
+  gap: 70px;
+  margin: 0 20px 0 20px;
+  margin-block-end: 140px;
+}
+
+.block_title {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.875rem, 1.3873rem + 2.0809vw, 3rem);
+  text-align: center;
+}
+.fourth-block_title {
+  display: grid;
+  gap: 40px;
+  justify-items: center;
+}
+.block_paragraph {
+  font-family: "Work Sans", sans-serif;
+  max-width: 600px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.fourth-block_column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  min-height: 300px;
+  gap: 20px;
+}
+.fourth_column_grid {
+  display: grid;
+  justify-items: center;
+}
+.fourth_paragraph {
+  max-width: 280px;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+.fourth_img {
+  width: 62px;
+  margin-block-end: 7px;
+}
+
+.lmt {
+  position: relative;
+  margin-block-end: 31px;
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.lmt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  border-bottom: 1px solid red;
+  pointer-events: none;
+  transition: width 0.6s ease;
+}
+
+.lmt:hover::after {
+  border-bottom: 2px solid red;
+}
+
+.best_service {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-block-end: 149px;
+  padding: 0 20px 0 20px;
+}
+
+
+.service {
+  display: grid;
+  justify-items: center;
+}
+
+.service_img {
+  width: 48px;
+}
+
+.service_paragraph {
+  font-family: "Barlow Bold", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  font-style: normal;
+}
+.service_grade {
+  font-size: 92px;
+  font-family: "Barlow-Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.reviews {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.review_block {
+  display: grid;
+  border: 1px solid #dec7a6;
+  justify-items: center;
+  /* min-height: 353px; */
+}
+
+.svg_starr {
+  margin-block-start: 40px;
+  margin-block-end: 19px;
+}
+
+.review_block_title {
+  margin-block-end: 9px;
+  font-family: "Barlow Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.review_block_paragraph {
+  text-align: center;
+  margin-block-end: 22px;
+  max-width: 520px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+}
+
+.model {
+  display: grid;
+  position: relative;
+  justify-content: center;
+
+  top: 35px;
+  left: 0;
+}
+.yan_abramov {
+  margin-block-end: 30px;
+  font-family: "Barlow Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.service_block {
+  display: block;
+  margin-block-start: 75px;
+}
+
+.waiting_visit {
+  position: relative;
+  background-image: url(../img/barber\ at\ work\ two.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 644px;
+}
+
+.waiting_grid {
+  display: grid;
+  justify-items: start;
+  max-inline-size: 1240px;
+  margin: 0 auto;
+  color: white;
+  padding: 0 20px 0 20px;
+  gap: 40px;
+}
+
+.waiting_title_grid {
+  text-align: left;
+  max-width: 493px;
+  margin-block-start: 135px;
+}
+
+.waiting_title {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+}
+
+.waiting_paragraph {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.block_distance {
+  display: grid;
+  gap: 25px;
+}
+
+.send_letter {
+  margin-block-end: 75px;
+}
+
+.flex {
+  display: flex;
+  gap: 40px;
+}
+
+.connect_with_us {
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  margin-block-end: 8px;
+}
+
+.our_data {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+.map {
+  max-width: 1462px;
+  min-height: 527px;
+}
+
+.baloon__name {
+  text-align: center;
+  font-family: "Barlow ExtraBold", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.social_media {
+  display: flex;
+  justify-content: flex-end;
+  gap: 31px;
+  margin-block-start: 28px;
+  margin-block-end: 82px;
+}
+
+.social_media a:last-child {
+  margin-right: 68px;
+}
+
+.button {
+  transition: transform 0.3s ease;
+}
+
+.button:active {
+  transform: translate(1px, 1px);
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99990;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modal__box {
+  position: relative;
+  background: #ffff;
+  max-width: 600px;
+  padding: 47px 31px;
+  z-index: 1;
+  margin: 30px 15px;
+  box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+  transform: scale(0);
+  transition: transform 0.8s;
+  border-radius: 10px;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.open .modal__box {
+  transform: scale(1);
+}
+
+.modal__close-btn {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  padding: 5x;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.modal__close-btn svg path {
+  transition: fill 0.4s;
+}
+
+.modal__close-btn:hover svg path {
+  fill: rgb(115, 113, 113);
+}
+
+.modal__close-btn:active svg path {
+  fill: rgb(245, 137, 98);
+}
+
+.input_block {
+  display: grid;
+  gap: 32px;
+}
+
+.name-time-input {
+  width: 100%;
+  border: none;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  padding-top: 10px;
+}
+input:focus {
+  outline: none;
+}
+
+.form__input-flex {
+  display: flex;
+  gap: 19px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-data {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  
+}
+.form_input._error{
+  box-shadow:  0 0 15px red;
+}
+
+textarea.name-time-input {
+  min-height: 177px;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.select {
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+  font-family: "Barlow Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.button_form {
+  display: grid;
+  justify-items: start;
+}
+
+.provide_details {
+  font-family: "Barlow Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+input {
+  padding: 10px 10px 3px 10px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.button__form {
+  padding: 20px 60px;
+  background-color: #dec7a6;
+  color: black;
+  border: none;
+}
+
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  transform: scale(1);
+}
+
+.checkbox__label {
+  position: relative;
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox__label::before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0px 10px 0px 0px;
+  border: 1px solid black;
+}
+
+
+
+.checkbox__label::after {
+  cursor: pointer;
+  transition: transform 0.5s ease 0s;
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #7a956b;
+  border-radius: 4px;
+  transform: scale(0);
+}
+
+
+
+@media (width <=609px) {
+  .barber_title_button {
+    gap: 20px;
+  }
+  .best_service {
+    grid-template-columns: none;
+  }
+
+  .service_block {
+    margin-block-start: 0px;
+  }
+  .fourth-block_column {
+    grid-template-columns:none;
+  }
+  .satisfaction_block {
+    gap: 58px;
+  }
+  .contact_block {
+    padding: 0px;
+  }
+  .barber_title {
+    margin-block-start: 350px 
+  }
+  .form__input-flex {
+    display: block;
+  }
+  .button_form {
+    justify-items: center;
+  }
+}
+
+@media (width < 863px) {
+  .first_block {
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 600px;
+    margin-block-start: 200px;
+  }
+
+  .stylish_title {
+    text-align: center;
+    max-width: none;
+  }
+
+  .stylish_paragraph {
+    max-width: none;
+    margin-inline-end: 0px;
+  }
+
+  .satisfaction_block {
+    justify-content: space-between;
+  }
+  .services {
+    max-inline-size: 600px;
+  }
+
+  .services_column {
+    display: grid;
+    grid-template-columns: none;
+  }
+
+  .services_grid {
+    gap: 40px;
+  }
+  .satisfaction_text {
+    font-size: 16px;
+  }
+}
